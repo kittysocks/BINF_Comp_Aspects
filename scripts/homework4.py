@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 
-file_input=open("Yeast_FAA4_string_interactions.tsv",mode='r') #open and read the file
+file_input=open("../hw_files/Yeast_FAA4_string_interactions.tsv",mode='r') #open and read the file
 
 dict1={}
 temp_key1=''
@@ -35,7 +35,7 @@ file_input.close()
 p_array = np.zeros((len(dict1),len(dict1)))
 
     
-file_input=open("Yeast_FAA4_string_interactions.tsv",mode='r')
+file_input=open("../hw_files/Yeast_FAA4_string_interactions.tsv",mode='r')
 line_id=0
 for line in file_input:
         line=line.rstrip()
@@ -50,7 +50,7 @@ for line in file_input:
 
 file_input.close()
 
-text_file=open("Yeast_FAA4_string_interactions_matrix", mode='w')
+text_file=open("../hw_files/Yeast_FAA4_string_interactions_matrix", mode='w')
 for row in p_array:
     np.savetxt(text_file,row)
 
